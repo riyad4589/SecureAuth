@@ -483,17 +483,11 @@ SecureAuth/
 ---
 
 <p align="center">
-  <strong>Projet réalisé dans le cadre du module Architecture des composants d'entreprises</strong><br/>
   <em>EMSI - École Marocaine des Sciences de l'Ingénieur</em><br/>
   <strong>2024-2025</strong>
 </p>
 
 ---
-
-<p align="center">
-  <a href="https://github.com/riyad4589/SecureAuth/issues">🐛 Signaler un Bug</a> •
-  <a href="https://github.com/riyad4589/SecureAuth/issues">✨ Proposer une Fonctionnalité</a>
-</p>
 
 <p align="center">
   <strong>⭐ Mettez une étoile si ce projet vous a été utile !</strong>
