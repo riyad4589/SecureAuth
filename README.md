@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/riyad4589/SecureAuth/main/frontend/src/images/light_theme.png" alt="SecureAuth Logo" width="220"/>
+  <img src="https://raw.githubusercontent.com/riyad4589/SecureAuth/main/frontend/src/images/light_theme.png" alt="SecureAuth Logo" width="300"/>
 </p>
 
 
