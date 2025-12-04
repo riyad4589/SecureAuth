@@ -28,6 +28,7 @@ logs/
 .env.production
 backend/.env
 **/application-dev.yml
+**/application.yml
 
 # Database
 *.db
