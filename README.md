@@ -13,7 +13,7 @@
   <a href="#-démarrage-rapide">Démarrage</a> •
   <a href="#-architecture">Architecture</a> •
   <a href="#-documentation-api">API</a> •
-  <a href="#-déploiement">Déploiement</a>
+  <a href="#-contributeurs">Contributeurs</a>
 </p>
 
 <p align="center">
@@ -31,7 +31,6 @@
 - [✨ Fonctionnalités](#-fonctionnalités)
 - [🏗️ Architecture](#️-architecture)
 - [🚀 Démarrage Rapide](#-démarrage-rapide)
-- [☁️ Déploiement](#️-déploiement)
 - [📖 Documentation API](#-documentation-api)
 - [🔐 Sécurité](#-sécurité)
 - [👥 Rôles et Permissions](#-rôles-et-permissions)
