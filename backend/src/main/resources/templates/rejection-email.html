@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande non approuvée</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0d1117;">
+    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <td align="center" style="padding: 40px 0;">
+                <table role="presentation" style="width: 600px; border-collapse: collapse; background-color: #161b22; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);">
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #6e7681 0%, #484f58 100%); padding: 32px 40px; text-align: center;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px; display: flex; align-items: center; gap: 8px;">
+                                <img src="/images/logo.png" alt="logo" style="height: 28px; width: auto;">
+                                <span th:text="${appName}">SecureAuth+</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px;">
+                                Plateforme IAM Sécurisée
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 40px;">
+                            <h2 style="margin: 0 0 16px 0; color: #f0f6fc; font-size: 22px; font-weight: 600;">
+                                Bonjour <span th:text="${firstName}">Prénom</span>,
+                            </h2>
+                            
+                            <p style="margin: 0 0 24px 0; color: #8b949e; font-size: 15px; line-height: 1.6;">
+                                Nous avons examiné votre demande d'inscription sur <span th:text="${appName}">SecureAuth+</span>.
+                                Malheureusement, nous ne sommes pas en mesure d'approuver votre demande pour le moment.
+                            </p>
+                            
+                            <!-- Reason Box -->
+                            <div th:if="${reason != null and reason != ''}" style="background-color: rgba(248, 81, 73, 0.1); border: 1px solid #f85149; border-radius: 6px; padding: 16px; margin-bottom: 24px;">
+                                <h4 style="margin: 0 0 8px 0; color: #f85149; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+                                    Raison du refus
+                                </h4>
+                                <p style="margin: 0; color: #f0f6fc; font-size: 14px; line-height: 1.5;" th:text="${reason}">
+                                    Raison non spécifiée
+                                </p>
+                            </div>
+                            
+                            <p style="margin: 0 0 24px 0; color: #8b949e; font-size: 15px; line-height: 1.6;">
+                                Si vous pensez qu'il s'agit d'une erreur ou si vous souhaitez soumettre une nouvelle demande 
+                                avec des informations supplémentaires, n'hésitez pas à nous contacter.
+                            </p>
+                            
+                            <p style="margin: 0; color: #8b949e; font-size: 15px; line-height: 1.6;">
+                                Cordialement,<br>
+                                <strong style="color: #f0f6fc;">L'équipe <span th:text="${appName}">SecureAuth+</span></strong>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #0d1117; padding: 24px 40px; border-top: 1px solid #30363d;">
+                            <p style="margin: 0; color: #484f58; font-size: 12px; line-height: 1.6;">
+                                © <span th:text="${year}">2025</span> <span th:text="${appName}">SecureAuth+</span>. Tous droits réservés.
+                            </p>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

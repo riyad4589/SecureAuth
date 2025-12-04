@@ -1,0 +1,102 @@
+spring:
+  application:
+    name: secureauth-backend
+    admin:
+      enabled: false
+  
+  datasource:
+    url: jdbc:postgresql://secureauth-riyadmaj10-0380.d.aivencloud.com:14484/defaultdb?sslmode=require
+    username: avnadmin
+    password: AVNS_YvB-s8WjB8KgHI7Y2UJ
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 300000
+      max-lifetime: 600000
+      connection-timeout: 20000
+      pool-name: SecureAuthHikariPool
+  
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          batch_size: 25
+        order_inserts: true
+        order_updates: true
+  
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    time-zone: UTC
+
+  jmx:
+    enabled: false
+  devtools:
+    restart:
+      enabled: false
+
+# JWT Configuration
+jwt:
+  secret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+  expiration: 3600000
+  refresh-expiration: 86400000
+
+# Security Configuration
+security:
+  max-login-attempts: 3
+  account-lock-duration: 900000  # 15 minutes en ms
+
+# Server Configuration
+server:
+  port: 8080
+  address: 0.0.0.0
+  error:
+    include-message: always
+    include-binding-errors: always
+
+# OpenAPI/Swagger
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+
+# Logging
+logging:
+  level:
+    com.secureauth: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: WARN
+
+# Email Configuration (Gmail SMTP)
+spring.mail:
+  host: smtp.gmail.com
+  port: 587
+  username: riyadmaj10@gmail.com
+  password: agua ohza ghnd hqva
+  properties:
+    mail:
+      smtp:
+        auth: true
+        starttls:
+          enable: true
+          required: true
+        connectiontimeout: 5000
+        timeout: 5000
+        writetimeout: 5000
+
+# Application Configuration
+app:
+  name: SecureAuth+
+  url: http://localhost:5173
+  mail:
+    from: riyadmaj10@gmail.com
+    from-name: SecureAuth+ Security Team

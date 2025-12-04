@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue sur SecureAuth+</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0d1117;">
+    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <td align="center" style="padding: 40px 0;">
+                <table role="presentation" style="width: 600px; border-collapse: collapse; background-color: #161b22; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);">
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #238636 0%, #2ea043 100%); padding: 32px 40px; text-align: center;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px; display: flex; align-items: center; gap: 8px;">
+                                <img src="/images/logo.png" alt="logo" style="height: 28px; width: auto;">
+                                <span th:text="${appName}">SecureAuth+</span>
+                            </h1>
+                            <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px;">
+                                Plateforme IAM Sécurisée
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 40px;">
+                            <!-- Welcome Message -->
+                            <h2 style="margin: 0 0 16px 0; color: #f0f6fc; font-size: 22px; font-weight: 600;">
+                                Bienvenue, <span th:text="${firstName}">Prénom</span> ! 🎉
+                            </h2>
+                            
+                            <p style="margin: 0 0 24px 0; color: #8b949e; font-size: 15px; line-height: 1.6;">
+                                Votre demande d'inscription a été <strong style="color: #2ea043;">approuvée</strong> par notre équipe d'administration. 
+                                Vous pouvez maintenant vous connecter à votre compte.
+                            </p>
+                            
+                            <!-- Credentials Box -->
+                            <div style="background-color: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 24px; margin-bottom: 24px;">
+                                <h3 style="margin: 0 0 16px 0; color: #2ea043; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">
+                                    📋 Vos informations de connexion
+                                </h3>
+                                
+                                <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #8b949e; font-size: 14px; width: 140px;">Nom d'utilisateur :</td>
+                                        <td style="padding: 8px 0;">
+                                            <code style="background-color: #30363d; color: #58a6ff; padding: 4px 12px; border-radius: 4px; font-size: 14px; font-family: 'Consolas', monospace;" th:text="${username}">username</code>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 8px 0; color: #8b949e; font-size: 14px;">Mot de passe :</td>
+                                        <td style="padding: 8px 0;">
+                                            <code style="background-color: #238636; color: #ffffff; padding: 4px 12px; border-radius: 4px; font-size: 14px; font-family: 'Consolas', monospace;" th:text="${temporaryPassword}">********</code>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <!-- Warning Box -->
+                            <div style="background-color: rgba(187, 128, 9, 0.1); border: 1px solid #9e6a03; border-radius: 6px; padding: 16px; margin-bottom: 24px;">
+                                <p style="margin: 0; color: #f0883e; font-size: 13px; line-height: 1.5;">
+                                    ⚠️ <strong>Important :</strong> Pour des raisons de sécurité, nous vous recommandons fortement de 
+                                    <strong>changer votre mot de passe</strong> dès votre première connexion.
+                                </p>
+                            </div>
+                            
+                            <!-- CTA Button -->
+                            <div style="text-align: center; margin: 32px 0;">
+                                <a th:href="${loginUrl}" style="display: inline-block; background: linear-gradient(135deg, #238636 0%, #2ea043 100%); color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 6px; font-size: 15px; font-weight: 600; box-shadow: 0 4px 12px rgba(35, 134, 54, 0.4);">
+                                    🚀 Se connecter maintenant
+                                </a>
+                            </div>
+                            
+                            <!-- Security Tips -->
+                            <div style="border-top: 1px solid #30363d; padding-top: 24px; margin-top: 24px;">
+                                <h4 style="margin: 0 0 12px 0; color: #f0f6fc; font-size: 14px; font-weight: 600;">
+                                    🛡️ Conseils de sécurité
+                                </h4>
+                                <ul style="margin: 0; padding-left: 20px; color: #8b949e; font-size: 13px; line-height: 1.8;">
+                                    <li>Activez l'authentification à deux facteurs (2FA) dans les paramètres de sécurité</li>
+                                    <li>Ne partagez jamais vos identifiants avec qui que ce soit</li>
+                                    <li>Déconnectez-vous toujours après utilisation sur un appareil partagé</li>
+                                    <li>Vérifiez régulièrement vos sessions actives</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #0d1117; padding: 24px 40px; border-top: 1px solid #30363d;">
+                            <table role="presentation" style="width: 100%; border-collapse: collapse;">
+                                <tr>
+                                    <td style="color: #484f58; font-size: 12px; line-height: 1.6;">
+                                        <p style="margin: 0 0 8px 0;">
+                                            Cet email a été envoyé automatiquement par <span th:text="${appName}">SecureAuth+</span>.
+                                        </p>
+                                        <p style="margin: 0;">
+                                            © <span th:text="${year}">2025</span> <span th:text="${appName}">SecureAuth+</span>. Tous droits réservés.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
