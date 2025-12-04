@@ -1,170 +1,138 @@
 <p align="center">
-  <img src="frontend/src/images/light_theme.png" alt="SecurAuth Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/riyad4589/SecureAuth/main/frontend/src/images/light_theme.png" alt="SecureAuth Logo" width="180"/>
 </p>
 
-<h1 align="center">🔐 SecurAuth+</h1>
+<h1 align="center">🔐 SecureAuth</h1>
 
 <p align="center">
-  <strong>Enterprise-Grade Identity & Access Management Platform</strong>
+  <strong>Plateforme de Gestion des Identités et des Accès (IAM) d'Entreprise</strong>
 </p>
 
 <p align="center">
-  <a href="#-features">Features</a> •
-  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-fonctionnalités">Fonctionnalités</a> •
+  <a href="#-démarrage-rapide">Démarrage</a> •
   <a href="#-architecture">Architecture</a> •
-  <a href="#-api-documentation">API</a> •
-  <a href="#-screenshots">Screenshots</a> •
-  <a href="#-license">License</a>
+  <a href="#-documentation-api">API</a> •
+  <a href="#-déploiement">Déploiement</a>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 17"/>
-  <img src="https://img.shields.io/badge/Spring%20Boot-3.2.0-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot"/>
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.5.0-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot"/>
   <img src="https://img.shields.io/badge/React-18.2-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
   <img src="https://img.shields.io/badge/PostgreSQL-16-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/JWT-Authentication-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white" alt="JWT"/>
-  <img src="https://img.shields.io/badge/2FA-TOTP-4285F4?style=for-the-badge&logo=google-authenticator&logoColor=white" alt="2FA"/>
-  <img src="https://img.shields.io/badge/RBAC-Enabled-FF6B6B?style=for-the-badge&logo=shield&logoColor=white" alt="RBAC"/>
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"/>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/github/stars/Azzammoo10/SecurAuth?style=social" alt="Stars"/>
-  <img src="https://img.shields.io/github/forks/Azzammoo10/SecurAuth?style=social" alt="Forks"/>
-  <img src="https://img.shields.io/github/watchers/Azzammoo10/SecurAuth?style=social" alt="Watchers"/>
-</p>
-
 ---
 
-## 📋 Table of Contents
+## 📋 Table des Matières
 
-<details>
-<summary>Click to expand</summary>
-
-- [🎯 Overview](#-overview)
-- [✨ Features](#-features)
+- [🎯 Présentation](#-présentation)
+- [✨ Fonctionnalités](#-fonctionnalités)
 - [🏗️ Architecture](#️-architecture)
-- [🚀 Quick Start](#-quick-start)
-- [📖 API Documentation](#-api-documentation)
-- [🔐 Security Features](#-security-features)
-- [👥 Role-Based Access Control](#-role-based-access-control)
-- [📊 Audit & Compliance](#-audit--compliance)
-- [🖼️ Screenshots](#️-screenshots)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-
-</details>
+- [🚀 Démarrage Rapide](#-démarrage-rapide)
+- [☁️ Déploiement](#️-déploiement)
+- [📖 Documentation API](#-documentation-api)
+- [🔐 Sécurité](#-sécurité)
+- [👥 Rôles et Permissions](#-rôles-et-permissions)
+- [🛠️ Stack Technique](#️-stack-technique)
+- [📁 Structure du Projet](#-structure-du-projet)
+- [👤 Contributeurs](#-contributeurs)
 
 ---
 
-## 🎯 Overview
+## 🎯 Présentation
 
-**SecurAuth** is a comprehensive **Identity and Access Management (IAM)** platform designed for modern enterprises. It provides centralized user management, robust authentication mechanisms, granular access control, and complete audit trails.
+**SecureAuth** est une plateforme complète de **Gestion des Identités et des Accès (IAM)** conçue pour les entreprises modernes. Elle offre une gestion centralisée des utilisateurs, des mécanismes d'authentification robustes, un contrôle d'accès granulaire et un historique complet des audits.
 
-### 🎪 Key Highlights
+### 🌟 Points Clés
 
-| Feature | Description |
-|---------|-------------|
-| 🔑 **Centralized Identity** | Manage all users from a single dashboard |
-| 🛡️ **Multi-Factor Auth** | Google Authenticator TOTP integration |
-| 👮 **RBAC** | Granular role-based permissions |
-| 📝 **Full Audit Trail** | Track every action with detailed logs |
-| 🔄 **Self-Service** | Users manage their own security settings |
-| 📧 **Email Notifications** | Automated alerts and notifications |
+| Fonctionnalité | Description |
+|----------------|-------------|
+| 🔑 **Identité Centralisée** | Gérez tous les utilisateurs depuis un tableau de bord unique |
+| 🛡️ **Authentification Multi-Facteurs** | Intégration Google Authenticator (TOTP) |
+| 👮 **RBAC** | Permissions granulaires basées sur les rôles |
+| 📝 **Piste d'Audit Complète** | Traçabilité de chaque action avec logs détaillés |
+| 🔄 **Self-Service** | Les utilisateurs gèrent leurs propres paramètres de sécurité |
 
 ---
 
-## ✨ Features
+## ✨ Fonctionnalités
 
-### 🔐 Authentication & Security
+### 🔐 Authentification & Sécurité
 
 <table>
 <tr>
 <td width="50%">
 
-#### JWT Authentication
-- ⚡ Access Token (1 hour validity)
-- 🔄 Refresh Token (7 days validity)
-- 🚫 Token revocation on logout
-- 🔒 Secure token storage
+**Authentification JWT**
+- ⚡ Token d'accès
+- 🔄 Token de rafraîchissement
+- 🚫 Révocation à la déconnexion
+- 🔒 Stockage sécurisé
 
 </td>
 <td width="50%">
 
-#### Two-Factor Authentication
-- 📱 Google Authenticator support
-- 🔢 TOTP (RFC 6238 compliant)
-- 📷 QR Code generation
-- ✅ Easy enable/disable
+**Authentification à Deux Facteurs**
+- 📱 Support Google Authenticator
+- 🔢 TOTP (conforme RFC 6238)
+- 📷 Génération de QR Code
+- ✅ Activation/Désactivation facile
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-#### Password Security
-- 🔐 BCrypt hashing with salt
-- 📏 Complexity requirements
-- 🕐 Password history (last 5)
-- ⏰ Forced change on first login
+**Sécurité des Mots de Passe**
+- 🔐 Hachage BCrypt avec sel
+- 📏 Exigences de complexité
+- 🕐 Historique (5 derniers)
+- ⏰ Changement forcé à la première connexion
 
 </td>
 <td width="50%">
 
-#### Account Protection
-- 🚫 Auto-lock after 3 failed attempts
-- 🔓 Admin unlock capability
-- 📍 IP & User-Agent tracking
-- 🛑 Session management
+**Protection des Comptes**
+- 🚫 Verrouillage après 3 échecs
+- 🔓 Déverrouillage par admin
+- 📍 Suivi IP & User-Agent
+- 🛑 Gestion des sessions
 
 </td>
 </tr>
 </table>
 
-### 👥 User Management
+### 👥 Gestion des Utilisateurs
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    USER LIFECYCLE                            │
-├─────────────────────────────────────────────────────────────┤
-│  📝 Registration    →  ✅ Approval  →  🔐 Activation        │
-│       ↓                    ↓               ↓                 │
-│  📧 Notification    ←  👤 Admin     →  🎉 Welcome Email     │
-└─────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────┐
+│                  CYCLE DE VIE UTILISATEUR                    │
+├──────────────────────────────────────────────────────────────┤
+│  📝 Inscription  →  ✅ Approbation  →  🔐 Activation        │
+│       ↓                   ↓                ↓                 │
+│  📧 Notification  ←  👤 Admin      →  🎉 Email de bienvenue │
+└──────────────────────────────────────────────────────────────┘
 ```
 
-- ➕ Create users with auto-generated credentials
-- ✏️ Edit user profiles and roles
-- 🔄 Enable/Disable accounts
-- 🔓 Unlock locked accounts
-- 🔑 Reset passwords
-- 🗑️ Delete users
+- ➕ Création d'utilisateurs avec identifiants auto-générés
+- ✏️ Modification des profils et rôles
+- 🔄 Activation/Désactivation des comptes
+- 🔓 Déverrouillage des comptes verrouillés
+- 🔑 Réinitialisation des mots de passe
+- 🗑️ Suppression d'utilisateurs
 
-### 📋 Registration Workflow
+### 📊 Journaux d'Audit
 
-```mermaid
-graph LR
-    A[📝 Request] --> B{🔍 Review}
-    B -->|✅ Approve| C[👤 Create Account]
-    B -->|❌ Reject| D[📧 Notify Rejection]
-    C --> E[📧 Send Credentials]
-```
-
-### 📊 Audit Logs
-
-| Action | Details Captured |
+| Action | Détails Capturés |
 |--------|------------------|
-| `LOGIN_SUCCESS` | User, IP, Timestamp, User-Agent |
-| `LOGIN_FAILED` | Username, IP, Reason, Attempt Count |
-| `USER_CREATED` | Created By, User Details |
-| `PASSWORD_CHANGED` | User, Changed By |
-| `2FA_ENABLED` | User, Timestamp |
-| `SESSION_TERMINATED` | User, Session ID, Terminated By |
+| `LOGIN_SUCCESS` | Utilisateur, IP, Horodatage, User-Agent |
+| `LOGIN_FAILED` | Nom d'utilisateur, IP, Raison, Nombre de tentatives |
+| `USER_CREATED` | Créé par, Détails utilisateur |
+| `PASSWORD_CHANGED` | Utilisateur, Modifié par |
+| `2FA_ENABLED` | Utilisateur, Horodatage |
+| `SESSION_TERMINATED` | Utilisateur, ID Session, Terminé par |
 
 ---
 
@@ -172,265 +140,225 @@ graph LR
 
 ```
 ┌────────────────────────────────────────────────────────────────┐
-│                         CLIENT LAYER                            │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │   React     │  │   Postman   │  │  3rd Party  │             │
-│  │  Frontend   │  │   Client    │  │    Apps     │             │
-│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘             │
-└─────────┼────────────────┼────────────────┼────────────────────┘
+│                       COUCHE CLIENT                            │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐            │
+│  │   React     │  │   Postman   │  │  Apps       │            │
+│  │  Frontend   │  │   Client    │  │  Tierces    │            │
+│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘            │
+└─────────┼────────────────┼────────────────┼───────────────────┘
           │                │                │
           ▼                ▼                ▼
 ┌────────────────────────────────────────────────────────────────┐
-│                        API GATEWAY                              │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │              Spring Security + JWT Filter                 │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│                      PASSERELLE API                            │
+│  ┌──────────────────────────────────────────────────────────┐ │
+│  │             Spring Security + Filtre JWT                  │ │
+│  └──────────────────────────────────────────────────────────┘ │
 └────────────────────────────────────────────────────────────────┘
           │
           ▼
 ┌────────────────────────────────────────────────────────────────┐
-│                      BACKEND SERVICES                           │
-│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐          │
-│  │   Auth   │ │   User   │ │   Role   │ │  Audit   │          │
-│  │ Service  │ │ Service  │ │ Service  │ │ Service  │          │
-│  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘          │
-└───────┼────────────┼────────────┼────────────┼─────────────────┘
+│                    SERVICES BACKEND                            │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐         │
+│  │   Auth   │ │   User   │ │   Role   │ │  Audit   │         │
+│  │ Service  │ │ Service  │ │ Service  │ │ Service  │         │
+│  └────┬─────┘ └────┬─────┘ └────┬─────┘ └────┬─────┘         │
+└───────┼────────────┼────────────┼────────────┼────────────────┘
         │            │            │            │
         ▼            ▼            ▼            ▼
 ┌────────────────────────────────────────────────────────────────┐
-│                       DATA LAYER                                │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │                    PostgreSQL                             │  │
-│  │    Users │ Roles │ Sessions │ Audit Logs │ API Keys      │  │
-│  └──────────────────────────────────────────────────────────┘  │
+│                     COUCHE DONNÉES                             │
+│  ┌──────────────────────────────────────────────────────────┐ │
+│  │                     PostgreSQL                            │ │
+│  │    Users │ Roles │ Sessions │ Audit Logs │ API Keys      │ │
+│  └──────────────────────────────────────────────────────────┘ │
 └────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Démarrage Rapide
 
-### Prerequisites
+### Prérequis
 
-| Requirement | Version |
-|-------------|---------|
+| Requis | Version |
+|--------|---------|
 | ☕ Java | 17+ |
 | 📦 Maven | 3.8+ |
 | 🐘 PostgreSQL | 14+ |
 | 📗 Node.js | 18+ |
 | 📦 npm | 9+ |
 
-### ⚡ One-Click Setup (Windows)
+### 📥 Installation
 
-```powershell
-# Clone the repository
-git clone https://github.com/Azzammoo10/SecurAuth.git
-cd SecurAuth
-
-# Run setup script
-.\setup.ps1
+```bash
+# 1. Cloner le dépôt
+git clone https://github.com/riyad4589/SecureAuth.git
+cd SecureAuth
 ```
 
-### 🔧 Manual Setup
-
-<details>
-<summary><strong>1️⃣ Database Setup</strong></summary>
+### 🗄️ Configuration Base de Données
 
 ```sql
--- Create database
+-- Créer la base de données
 CREATE DATABASE secureauth;
-
--- Run migrations
-\i database/init.sql
-\i database/migration_add_iam_features.sql
 ```
 
-</details>
+### ⚙️ Configuration Backend
 
-<details>
-<summary><strong>2️⃣ Backend Setup</strong></summary>
+Créer le fichier `backend/src/main/resources/application.yml` :
+
+```yaml
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/secureauth
+    username: postgres
+    password: votre_mot_de_passe
+    
+jwt:
+  secret: votre_secret_jwt_64_caracteres_minimum
+  expiration: 3600000
+  
+spring:
+  mail:
+    username: votre_email@gmail.com
+    password: votre_app_password
+```
+
+### 🚀 Lancement
 
 ```bash
+# Backend (Terminal 1)
 cd backend
-
-# Configure application.yml with your database credentials
-
-# Build and run
-mvn clean install
 mvn spring-boot:run
-```
 
-Backend will start at: `http://localhost:8080`
-
-</details>
-
-<details>
-<summary><strong>3️⃣ Frontend Setup</strong></summary>
-
-```bash
+# Frontend (Terminal 2)
 cd frontend
-
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-Frontend will start at: `http://localhost:5173`
+| Service | URL |
+|---------|-----|
+| 🖥️ Frontend | http://localhost:5173 |
+| ⚙️ Backend | http://localhost:8080 |
+| 📚 Swagger | http://localhost:8080/swagger-ui.html |
 
-</details>
+### 🔑 Identifiants par Défaut
 
-### 🔑 Default Credentials
-
-| Role | Username | Password |
-|------|----------|----------|
+| Rôle | Utilisateur | Mot de passe |
+|------|-------------|--------------|
 | 👑 Admin | `admin` | `Admin@123` |
-| 👮 Security | `security` | `Security@123` |
-| 📊 Manager | `manager` | `Manager@123` |
-| 👤 User | `user` | `User@123` |
 
-> ⚠️ **Important**: Change default passwords after first login!
+> ⚠️ **Important** : Créer d'autre utilisateurs pour les autres roles
+
+
 
 ---
 
-## 📖 API Documentation
+## 📖 Documentation API
 
 ### 🌐 Base URL
 
 ```
-http://localhost:8080/api/v1
+/api/v1
 ```
 
-### 🔗 Endpoints Overview
+### 🔗 Endpoints Principaux
 
-<details>
-<summary><strong>🔐 Authentication</strong></summary>
+<summary><strong>🔐 Authentification</strong></summary>
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `POST` | `/auth/login` | User login |
-| `POST` | `/auth/logout` | User logout |
-| `POST` | `/auth/refresh` | Refresh access token |
-| `POST` | `/auth/verify-2fa` | Verify 2FA code |
-| `POST` | `/auth/register` | Public registration request |
+| Méthode | Endpoint | Description |
+|---------|----------|-------------|
+| `POST` | `/auth/login` | Connexion utilisateur |
+| `POST` | `/auth/logout` | Déconnexion |
+| `POST` | `/auth/refresh` | Rafraîchir le token |
+| `POST` | `/auth/verify-2fa` | Vérifier le code 2FA |
+| `POST` | `/auth/register` | Demande d'inscription publique |
 
-</details>
 
-<details>
-<summary><strong>👥 Users</strong></summary>
+<summary><strong>👥 Utilisateurs</strong></summary>
 
-| Method | Endpoint | Description | Role |
-|--------|----------|-------------|------|
-| `GET` | `/users` | List all users | ADMIN, MANAGER |
-| `POST` | `/users` | Create user | ADMIN |
-| `GET` | `/users/{id}` | Get user by ID | ADMIN, MANAGER |
-| `PUT` | `/users/{id}` | Update user | ADMIN |
-| `DELETE` | `/users/{id}` | Delete user | ADMIN |
-| `PATCH` | `/users/{id}/toggle-status` | Enable/Disable | ADMIN |
-| `PATCH` | `/users/{id}/unlock` | Unlock account | ADMIN |
-| `POST` | `/users/{id}/reset-password` | Reset password | ADMIN |
+| Méthode | Endpoint | Description | Rôle |
+|---------|----------|-------------|------|
+| `GET` | `/users` | Lister les utilisateurs | ADMIN, MANAGER |
+| `POST` | `/users` | Créer un utilisateur | ADMIN |
+| `GET` | `/users/{id}` | Obtenir un utilisateur | ADMIN, MANAGER |
+| `PUT` | `/users/{id}` | Modifier un utilisateur | ADMIN |
+| `DELETE` | `/users/{id}` | Supprimer un utilisateur | ADMIN |
+| `PATCH` | `/users/{id}/toggle-status` | Activer/Désactiver | ADMIN |
+| `PATCH` | `/users/{id}/unlock` | Déverrouiller | ADMIN |
 
-</details>
 
-<details>
-<summary><strong>🎭 Roles</strong></summary>
+<summary><strong>🎭 Rôles</strong></summary>
 
-| Method | Endpoint | Description | Role |
-|--------|----------|-------------|------|
-| `GET` | `/roles` | List all roles | ADMIN |
-| `POST` | `/roles` | Create role | ADMIN |
-| `PUT` | `/roles/{id}` | Update role | ADMIN |
-| `DELETE` | `/roles/{id}` | Delete role | ADMIN |
+| Méthode | Endpoint | Description | Rôle |
+|---------|----------|-------------|------|
+| `GET` | `/roles` | Lister les rôles | ADMIN |
+| `POST` | `/roles` | Créer un rôle | ADMIN |
+| `PUT` | `/roles/{id}` | Modifier un rôle | ADMIN |
+| `DELETE` | `/roles/{id}` | Supprimer un rôle | ADMIN |
 
-</details>
 
-<details>
-<summary><strong>📋 Registrations</strong></summary>
+<summary><strong>📊 Audit</strong></summary>
 
-| Method | Endpoint | Description | Role |
-|--------|----------|-------------|------|
-| `GET` | `/registrations` | List requests | ADMIN |
-| `POST` | `/registrations/{id}/approve` | Approve request | ADMIN |
-| `POST` | `/registrations/{id}/reject` | Reject request | ADMIN |
+| Méthode | Endpoint | Description | Rôle |
+|---------|----------|-------------|------|
+| `GET` | `/audit` | Lister les logs | ADMIN, SECURITY |
+| `GET` | `/audit/stats` | Statistiques | ADMIN, SECURITY |
+| `POST` | `/audit/export` | Exporter les logs | ADMIN, SECURITY |
 
-</details>
 
-<details>
-<summary><strong>📊 Audit Logs</strong></summary>
-
-| Method | Endpoint | Description | Role |
-|--------|----------|-------------|------|
-| `GET` | `/audit` | List audit logs | ADMIN, SECURITY |
-| `GET` | `/audit/stats` | Get statistics | ADMIN, SECURITY |
-| `POST` | `/audit/export` | Export logs | ADMIN, SECURITY |
-
-</details>
-
-### 📬 Postman Collection
-
-Import the collection for easy testing:
+### 📬 Collection Postman
 
 ```
 postman/SecureAuth_API.postman_collection.json
 ```
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/)
+---
+
+## 🔐 Sécurité
+
+### 🛡️ Couches de Sécurité
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                     STACK SÉCURITÉ                          │
+├─────────────────────────────────────────────────────────────┤
+│  Couche 1: Chiffrement HTTPS/TLS                            │
+├─────────────────────────────────────────────────────────────┤
+│  Couche 2: Authentification par Token JWT                   │
+├─────────────────────────────────────────────────────────────┤
+│  Couche 3: Authentification à Deux Facteurs (TOTP)          │
+├─────────────────────────────────────────────────────────────┤
+│  Couche 4: Contrôle d'Accès Basé sur les Rôles (RBAC)       │
+├─────────────────────────────────────────────────────────────┤
+│  Couche 5: Politique de Mots de Passe                       │
+├─────────────────────────────────────────────────────────────┤
+│  Couche 6: Protection contre le Verrouillage                │
+├─────────────────────────────────────────────────────────────┤
+│  Couche 7: Gestion des Sessions                             │
+├─────────────────────────────────────────────────────────────┤
+│  Couche 8: Piste d'Audit Complète                           │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 🔒 Exigences Mot de Passe
+
+- ✅ Minimum 8 caractères
+- ✅ Au moins 1 majuscule
+- ✅ Au moins 1 minuscule
+- ✅ Au moins 1 chiffre
+- ✅ Au moins 1 caractère spécial (!@#$%^&*)
 
 ---
 
-## 🔐 Security Features
+## 👥 Rôles et Permissions
 
-### 🛡️ Security Layers
-
-```
-┌─────────────────────────────────────────────────────────┐
-│                    SECURITY STACK                        │
-├─────────────────────────────────────────────────────────┤
-│  Layer 1: HTTPS/TLS Encryption                          │
-├─────────────────────────────────────────────────────────┤
-│  Layer 2: JWT Token Authentication                      │
-├─────────────────────────────────────────────────────────┤
-│  Layer 3: Two-Factor Authentication (TOTP)              │
-├─────────────────────────────────────────────────────────┤
-│  Layer 4: Role-Based Access Control (RBAC)              │
-├─────────────────────────────────────────────────────────┤
-│  Layer 5: Password Policy Enforcement                   │
-├─────────────────────────────────────────────────────────┤
-│  Layer 6: Account Lockout Protection                    │
-├─────────────────────────────────────────────────────────┤
-│  Layer 7: Session Management                            │
-├─────────────────────────────────────────────────────────┤
-│  Layer 8: Complete Audit Trail                          │
-└─────────────────────────────────────────────────────────┘
-```
-
-### 🔒 Password Requirements
-
-- ✅ Minimum 8 characters
-- ✅ At least 1 uppercase letter
-- ✅ At least 1 lowercase letter
-- ✅ At least 1 number
-- ✅ At least 1 special character (!@#$%^&*)
-- ✅ Cannot reuse last 5 passwords
-
-### 📱 2FA Setup with Google Authenticator
-
-1. Navigate to **Account Security** → **Two-Factor Authentication**
-2. Click **Enable 2FA**
-3. Scan QR code with Google Authenticator
-4. Enter 6-digit verification code
-5. ✅ 2FA is now active!
-
----
-
-## 👥 Role-Based Access Control
-
-### 📊 Role Hierarchy
+### 📊 Hiérarchie des Rôles
 
 ```
          ┌─────────┐
-         │  ADMIN  │  ← Full system access
+         │  ADMIN  │  ← Accès complet au système
          └────┬────┘
               │
     ┌─────────┴─────────┐
@@ -439,173 +367,135 @@ postman/SecureAuth_API.postman_collection.json
 │MANAGER│         │ SECURITY  │
 └───┬───┘         └─────┬─────┘
     │                   │
-    │    User & Role    │    Audit & Security
-    │    Management     │    Monitoring
+    │   Gestion des     │   Surveillance
+    │   Utilisateurs    │   & Audit
     │                   │
     └─────────┬─────────┘
               │
          ┌────┴────┐
-         │  USER   │  ← Basic access
+         │  USER   │  ← Accès de base
          └─────────┘
 ```
 
-### 🎭 Role Permissions
+### 🎭 Matrice des Permissions
 
 | Permission | ADMIN | SECURITY | MANAGER | USER |
 |------------|:-----:|:--------:|:-------:|:----:|
-| View Dashboard | ✅ | ✅ | ✅ | ✅ |
-| Manage Users | ✅ | ❌ | ✅* | ❌ |
-| Manage Roles | ✅ | ❌ | ❌ | ❌ |
-| View Audit Logs | ✅ | ✅ | ❌ | ❌ |
-| Export Audit Logs | ✅ | ✅ | ❌ | ❌ |
-| Security Settings | ✅ | ✅ | ❌ | ❌ |
-| Approve Registrations | ✅ | ❌ | ❌ | ❌ |
-| API Key Management | ✅ | ✅ | ✅ | ✅ |
+| Voir le Dashboard | ✅ | ✅ | ✅ | ✅ |
+| Gérer les Utilisateurs | ✅ | ❌ | ✅* | ❌ |
+| Gérer les Rôles | ✅ | ❌ | ❌ | ❌ |
+| Voir les Logs d'Audit | ✅ | ✅ | ❌ | ❌ |
+| Exporter les Logs | ✅ | ✅ | ❌ | ❌ |
+| Paramètres de Sécurité | ✅ | ✅ | ❌ | ❌ |
+| Approuver les Inscriptions | ✅ | ❌ | ❌ | ❌ |
+| Gestion des Clés API | ✅ | ✅ | ✅ | ✅ |
 
-> *MANAGER can only manage USER role accounts
-
----
-
-## 📊 Audit & Compliance
-
-### 📝 Tracked Events
-
-| Category | Events |
-|----------|--------|
-| 🔐 **Authentication** | Login, Logout, Failed Attempts, 2FA Verification |
-| 👤 **User Management** | Create, Update, Delete, Enable, Disable, Unlock |
-| 🔑 **Password** | Change, Reset, Force Change |
-| 🎭 **Roles** | Assign, Remove, Create, Delete |
-| 📱 **2FA** | Enable, Disable, Verify |
-| 🔗 **Sessions** | Create, Terminate, Expire |
-| 🔑 **API Keys** | Generate, Revoke |
-
-### 📈 Compliance Ready
-
-- ✅ **GDPR** - Article 30 compliant logging
-- ✅ **SOX** - Complete audit trail
-- ✅ **ISO 27001** - Access control standards
-- ✅ **HIPAA** - Security safeguards
+> *MANAGER ne peut gérer que les comptes avec le rôle USER
 
 ---
 
-## 🖼️ Screenshots
-
-<details>
-<summary><strong>🖥️ View Screenshots</strong></summary>
-
-### 🔐 Login Page
-Modern split-screen design with animated branding
-
-### 📊 Dashboard
-Real-time statistics and quick actions
-
-### 👥 User Management
-Complete CRUD operations with role assignment
-
-### 📋 Audit Logs
-Advanced filtering and export capabilities
-
-### 🔒 Account Security
-2FA setup, session management, API keys
-
-</details>
-
----
-
-## 🛠️ Tech Stack
+## 🛠️ Stack Technique
 
 ### Backend
 
-| Technology | Purpose |
-|------------|---------|
-| ![Java](https://img.shields.io/badge/Java%2017-ED8B00?style=flat-square&logo=openjdk&logoColor=white) | Core Language |
-| ![Spring Boot](https://img.shields.io/badge/Spring%20Boot%203.2-6DB33F?style=flat-square&logo=spring-boot&logoColor=white) | Framework |
-| ![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat-square&logo=spring-security&logoColor=white) | Authentication & Authorization |
-| ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white) | Database |
-| ![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=json-web-tokens&logoColor=white) | Token Authentication |
-| ![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apache-maven&logoColor=white) | Build Tool |
+| Technologie | Usage |
+|-------------|-------|
+| ![Java](https://img.shields.io/badge/Java%2017-ED8B00?style=flat-square&logo=openjdk&logoColor=white) | Langage principal |
+| ![Spring Boot](https://img.shields.io/badge/Spring%20Boot%203.5-6DB33F?style=flat-square&logo=spring-boot&logoColor=white) | Framework |
+| ![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat-square&logo=spring-security&logoColor=white) | Auth & Autorisation |
+| ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white) | Base de données |
+| ![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=json-web-tokens&logoColor=white) | Authentification |
+| ![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apache-maven&logoColor=white) | Build |
 
 ### Frontend
 
-| Technology | Purpose |
-|------------|---------|
-| ![React](https://img.shields.io/badge/React%2018-61DAFB?style=flat-square&logo=react&logoColor=black) | UI Framework |
+| Technologie | Usage |
+|-------------|-------|
+| ![React](https://img.shields.io/badge/React%2018-61DAFB?style=flat-square&logo=react&logoColor=black) | Framework UI |
 | ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) | Build Tool |
 | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) | Styling |
-| ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios&logoColor=white) | HTTP Client |
+| ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat-square&logo=axios&logoColor=white) | Client HTTP |
 
 ---
 
-## 📁 Project Structure
+## 📁 Structure du Projet
 
 ```
-SecurAuth/
+SecureAuth/
 ├── 📁 backend/
 │   ├── 📁 src/main/java/com/secureauth/
-│   │   ├── 📁 config/          # Security & JWT config
-│   │   ├── 📁 controllers/     # REST endpoints
-│   │   ├── 📁 dto/             # Data transfer objects
-│   │   ├── 📁 entities/        # JPA entities
-│   │   ├── 📁 exceptions/      # Custom exceptions
-│   │   ├── 📁 repositories/    # Data access layer
-│   │   └── 📁 services/        # Business logic
+│   │   ├── 📁 config/          # Configuration Security & JWT
+│   │   ├── 📁 controllers/     # Endpoints REST
+│   │   ├── 📁 dto/             # Objets de transfert
+│   │   ├── 📁 entities/        # Entités JPA
+│   │   ├── 📁 exceptions/      # Exceptions personnalisées
+│   │   ├── 📁 repositories/    # Couche d'accès aux données
+│   │   └── 📁 services/        # Logique métier
 │   ├── 📁 src/main/resources/
 │   │   └── 📄 application.yml  # Configuration
+│   ├── 📄 Dockerfile
 │   └── 📄 pom.xml
 │
 ├── 📁 frontend/
 │   ├── 📁 src/
-│   │   ├── 📁 components/      # Reusable components
-│   │   ├── 📁 pages/           # Page components
-│   │   ├── 📁 services/        # API services
-│   │   ├── 📁 styles/          # CSS files
-│   │   └── 📄 App.jsx          # Root component
+│   │   ├── 📁 components/      # Composants réutilisables
+│   │   ├── 📁 pages/           # Pages de l'application
+│   │   ├── 📁 services/        # Services API
+│   │   ├── 📁 styles/          # Fichiers CSS
+│   │   └── 📄 App.jsx          # Composant racine
 │   ├── 📄 package.json
 │   └── 📄 vite.config.js
 │
 ├── 📁 database/
-│   ├── 📄 init.sql             # Initial schema
+│   ├── 📄 init.sql             # Schéma initial
 │   └── 📄 migration_*.sql      # Migrations
 │
 ├── 📁 postman/
 │   └── 📄 SecureAuth_API.postman_collection.json
 │
-├── 📄 README.md
-├── 📄 INSTALLATION.md
-├── 📄 QUICKSTART.md
-└── 📄 setup.ps1
+└── 📄 README.md
 ```
-
-
-# 👤 Contributeurs
-
-**MAJGHIROU Mohamed Riyad**
-
-- GitHub: [@riyad4589](https://github.com/riyad4589)
-- Email: [riyadmaj10@gmail.com](mailto:riyadmaj10@gmail.com)
-- LinkedIn: [Mohamed Riyad MAJGHIROU](https://www.linkedin.com/in/mohamed-riyad-majghirou-5b62aa388/)
-
-
-**AZZAM Mohamed**
-
-- GitHub: [@Azzammoo10](https://github.com/Azzammoo10)
-- Email: [azzam.moo10@gmail.com](mailto:azzam.moo10@gmail.com)
-- LinkedIn: [Mohamed AZZAM](https://www.linkedin.com/in/mohamed-azzam-93115823a/)
 
 ---
 
+## 👤 Contributeurs
 
+<table>
+<tr>
+<td align="center">
+<a href="https://github.com/riyad4589">
+<img src="https://github.com/riyad4589.png" width="100px;" alt="Mohamed Riyad MAJGHIROU"/><br />
+<sub><b>Mohamed Riyad MAJGHIROU</b></sub>
+</a><br />
+<a href="mailto:riyadmaj10@gmail.com">📧 Email</a> •
+<a href="https://www.linkedin.com/in/mohamed-riyad-majghirou-5b62aa388/">💼 LinkedIn</a>
+</td>
+<td align="center">
+<a href="https://github.com/Azzammoo10">
+<img src="https://github.com/Azzammoo10.png" width="100px;" alt="Mohamed AZZAM"/><br />
+<sub><b>Mohamed AZZAM</b></sub>
+</a><br />
+<a href="mailto:azzam.moo10@gmail.com">📧 Email</a> •
+<a href="https://www.linkedin.com/in/mohamed-azzam-93115823a/">💼 LinkedIn</a>
+</td>
+</tr>
+</table>
+
+---
 
 <p align="center">
-  <a href="https://github.com/Azzammoo10/SecurAuth/issues">🐛 Report Bug</a> •
-  <a href="https://github.com/Azzammoo10/SecurAuth/issues">✨ Request Feature</a> •
-  <a href="https://github.com/Azzammoo10/SecurAuth/wiki">📖 Documentation</a>
+  <strong>Projet réalisé dans le cadre du module Architecture des composants d'entreprises</strong><br/>
+  <em>EMSI - École Marocaine des Sciences de l'Ingénieur</em><br/>
+  <strong>2024-2025</strong>
+</p>
+
+---
+
+<p align="center">
+  <a href="https://github.com/riyad4589/SecureAuth/issues">🐛 Signaler un Bug</a> •
+  <a href="https://github.com/riyad4589/SecureAuth/issues">✨ Proposer une Fonctionnalité</a>
 </p>
 
 <p align="center">
-  <strong>⭐ Star this repo if you find it helpful!</strong>
-</p>
-
-<p align="center">
+  <strong>⭐ Mettez une étoile si ce projet vous a été utile !</strong>
 </p>
