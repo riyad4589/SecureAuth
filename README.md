@@ -1,3 +1,5 @@
+<a name="top"></a>
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/riyad4589/SecureAuth/main/frontend/src/images/light_theme.png" alt="SecureAuth Logo" width="300"/>
 </p>
@@ -497,5 +499,5 @@ SecureAuth/
 ---
 
 <p align="center">
-  <a href="#-secureauth">⬆️ Retour en haut</a>
+  <a href="#top">⬆️ Retour en haut</a>
 </p>
