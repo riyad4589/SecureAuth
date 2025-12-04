@@ -487,7 +487,7 @@ SecureAuth/
 
 <p align="center">
   <em>EMSI - École Marocaine des Sciences de l'Ingénieur</em><br/>
-  <strong>2024-2025</strong>
+  <strong>2025-2026</strong>
 </p>
 
 ---
