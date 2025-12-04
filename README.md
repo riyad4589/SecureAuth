@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/riyad4589/SecureAuth/main/frontend/src/images/light_theme.png" alt="SecureAuth Logo" width="180"/>
 </p>
 
-<h1 align="center">🔐 SecureAuth</h1>
+<h1 align="center">🔐 SecureAuth+</h1>
 
 <p align="center">
   <strong>Plateforme de Gestion des Identités et des Accès (IAM) d'Entreprise</strong>
