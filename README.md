@@ -11,7 +11,7 @@
 <p align="center">
   <a href="#-fonctionnalités">Fonctionnalités</a> •
   <a href="#-démarrage-rapide">Démarrage</a> •
-  <a href="#-architecture">Architecture</a> •
+  <a href="#%EF%B8%8F-architecture">Architecture</a> •
   <a href="#-documentation-api">API</a> •
   <a href="#-contributeurs">Contributeurs</a>
 </p>
@@ -457,28 +457,30 @@ SecureAuth/
 
 ---
 
-## 👤 Contributeurs
+<h2 align="center">👤 Contributeurs</h2>
 
-<table>
+<p align="center">
+<table align="center">
 <tr>
-<td align="center">
+<td align="center" width="300">
 <a href="https://github.com/riyad4589">
-<img src="https://github.com/riyad4589.png" width="100px;" alt="Mohamed Riyad MAJGHIROU"/><br />
-<sub><b>Mohamed Riyad MAJGHIROU</b></sub>
-</a><br />
+<img src="https://github.com/riyad4589.png" width="150px;" style="border-radius: 50%;" alt="Mohamed Riyad MAJGHIROU"/><br /><br />
+<b style="font-size: 18px;">Mohamed Riyad MAJGHIROU</b>
+</a><br /><br />
 <a href="mailto:riyadmaj10@gmail.com">📧 Email</a> •
 <a href="https://www.linkedin.com/in/mohamed-riyad-majghirou-5b62aa388/">💼 LinkedIn</a>
 </td>
-<td align="center">
+<td align="center" width="300">
 <a href="https://github.com/Azzammoo10">
-<img src="https://github.com/Azzammoo10.png" width="100px;" alt="Mohamed AZZAM"/><br />
-<sub><b>Mohamed AZZAM</b></sub>
-</a><br />
+<img src="https://github.com/Azzammoo10.png" width="150px;" style="border-radius: 50%;" alt="Mohamed AZZAM"/><br /><br />
+<b style="font-size: 18px;">Mohamed AZZAM</b>
+</a><br /><br />
 <a href="mailto:azzam.moo10@gmail.com">📧 Email</a> •
 <a href="https://www.linkedin.com/in/mohamed-azzam-93115823a/">💼 LinkedIn</a>
 </td>
 </tr>
 </table>
+</p>
 
 ---
 
@@ -491,4 +493,10 @@ SecureAuth/
 
 <p align="center">
   <strong>⭐ Mettez une étoile si ce projet vous a été utile !</strong>
+</p>
+
+---
+
+<p align="center">
+  <a href="#-secureauth">⬆️ Retour en haut</a>
 </p>
