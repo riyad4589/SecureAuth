@@ -255,17 +255,17 @@ npm run dev
 
 ## 🖼️ Captures d'Écran
 
-### 👑 Login
+### Login
 ![Login Page](screens/login.png)
 
 ---
 
-### 👑 Signup
+### Signup
 ![Signup Page](screens/signup.png)
 
 ---
 
-### 👑 Change default Password
+### Change default Password
 ![Change default Password](screens/changepass.png)
 
 ---
