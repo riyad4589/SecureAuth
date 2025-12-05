@@ -258,13 +258,17 @@ npm run dev
 ### 👑 Login
 ![Login Page](screens/login.png)
 
+---
+
 ### 👑 Signup
 ![Signup Page](screens/signup.png)
+
+---
 
 ### 👑 Change default Password
 ![Change default Password](screens/changepass.png)
 
-
+---
 
 ### 👑 Espace Admin
 
@@ -621,7 +625,3 @@ SecureAuth/
 <p align="center">
   <a href="#top">⬆️ Retour en haut</a>
 </p>
-
----
----
----
