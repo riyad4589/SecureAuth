@@ -13,7 +13,7 @@
   <a href="#-fonctionnalités">Fonctionnalités</a> •
   <a href="#%EF%B8%8F-architecture">Architecture</a> •
   <a href="#-démarrage-rapide">Démarrage</a> •
-  <a href="#-capturesd'ecran">Captures d'Écran</a> •
+  <a href="#️-captures-décran">Captures d'Écran</a> •
   <a href="#-documentation-api">API</a> •
   <a href="#-contributeurs">Contributeurs</a>
 </p>
@@ -32,8 +32,8 @@
 - [🎯 Présentation](#-présentation)
 - [✨ Fonctionnalités](#-fonctionnalités)
 - [🏗️ Architecture](#️-architecture)
-- [🚀 Démarrage Rapide](#-démarrage-rapide)
-- [🖼️ Captures d'Écran](#-capturesd'ecran)
+- [🚀 Démarrage Rapique](#-démarrage-rapide)
+- [🖼️ Captures d'Écran](#️-captures-décran)
 - [📖 Documentation API](#-documentation-api)
 - [🔐 Sécurité](#-sécurité)
 - [👥 Rôles et Permissions](#-rôles-et-permissions)
