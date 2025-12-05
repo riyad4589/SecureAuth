@@ -251,7 +251,127 @@ npm run dev
 
 > ⚠️ **Important** : Créer d'autre utilisateurs pour les autres roles
 
+---
 
+## 🖼️ Captures d'Écran
+
+### 👑 Login
+![Login Page](screens/login.png)
+
+### 👑 Signup
+![Signup Page](screens/signup.png)
+
+### 👑 Change default Password
+![Change default Password](screens/changepass.png)
+
+
+
+### 👑 Espace Admin
+
+#### Dashboard Admin
+![Dashboard Admin](screens/admin/dashboard.png)
+
+#### Sécurité - Gestion des Mots de Passe
+![Mots de Passe Admin](screens/admin/secure-mdp.png)
+
+#### Sécurité - Authentification 2FA
+![2FA Admin](screens/admin/secure-2fa.png)
+
+#### Sécurité - Gestion des Sessions
+![Sessions Admin](screens/admin/secure-sessions.png)
+
+#### Sécurité - Clés API
+![API Keys Admin](screens/admin/secure-api.png)
+
+#### Gestion des Utilisateurs
+![Gestion des Utilisateurs](screens/admin/users.png)
+
+#### Ajouter un Utilisateur
+![Ajouter un Utilisateur](screens/admin/add-user.png)
+
+### 👑 Reset Password
+![Reset Password](screens/resetpass.png)
+
+#### Gestion des Rôles
+![Gestion des Rôles](screens/admin/roles.png)
+
+#### Création de Nouveau Rôle
+![Création de Rôle](screens/admin/newrole.png)
+
+#### Journaux d'Audit
+![Journaux d'Audit](screens/admin/logs.png)
+
+---
+
+### 📊 Espace Manager
+
+#### Dashboard Manager
+![Dashboard Manager](screens/manager/dash.png)
+
+#### Sécurité - Gestion des Mots de Passe
+![Mots de Passe Manager](screens/manager/secure-mdp.png)
+
+#### Sécurité - Authentification 2FA
+![2FA Manager](screens/manager/secure-2fa.png)
+
+#### Sécurité - Gestion des Sessions
+![Sessions Manager](screens/manager/secure-sessions.png)
+
+#### Sécurité - Clés API
+![API Keys Manager](screens/manager/secure-api.png)
+
+#### Gestion des Utilisateurs
+![Gestion des Utilisateurs Manager](screens/manager/users.png)
+
+#### Ajouter un Utilisateur
+![Ajouter un Utilisateur Manager](screens/manager/adduser.png)
+
+### 👑 Reset Password
+![Reset Password](screens/resetpass.png)
+
+#### Modifier un Utilisateur
+![Modifier un Utilisateur](screens/manager/edituser.png)
+
+---
+
+### 🔒 Espace Security
+
+#### Dashboard Security
+![Dashboard Security](screens/security/dash.png)
+
+#### Sécurité - Gestion des Mots de Passe
+![Mots de Passe Security](screens/security/secure-mdp.png)
+
+#### Sécurité - Authentification 2FA
+![2FA Security](screens/security/secure-2fa.png)
+
+#### Sécurité - Gestion des Sessions
+![Sessions Security](screens/security/secure-sessions.png)
+
+#### Sécurité - Clés API
+![API Keys Security](screens/security/secure-api.png)
+
+#### Journaux d'Audit
+![Journaux d'Audit Security](screens/security/logs.png)
+
+---
+
+### 👤 Espace User
+
+#### Dashboard User
+![Dashboard User](screens/user/dash.png)
+
+#### Sécurité - Gestion des Mots de Passe
+![Mots de Passe User](screens/user/secure-mdp.png)
+
+#### Sécurité - Authentification 2FA
+![2FA User](screens/user/secure-2fa.png)
+
+#### Sécurité - Gestion des Sessions
+![Sessions User](screens/user/secure-sessions.png)
+
+#### Sécurité - Clés API
+![API Keys User](screens/user/secure-api.png)
 
 ---
 
