@@ -1,7 +1,7 @@
 <a name="top"></a>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/riyad4589/SecureAuth/main/frontend/src/images/light_theme.png" alt="SecureAuth Logo" width="300"/>
+  <img src="https://res.cloudinary.com/ddlyoollk/image/upload/v1765411161/gif_bhfahd.gif" alt="SecureAuth Logo" width="300"/>
 </p>
 
 
