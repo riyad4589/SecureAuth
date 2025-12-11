@@ -608,7 +608,8 @@ SecureAuth/
 <b style="font-size: 18px;">Mohamed AZZAM</b>
 </a><br /><br />
 <a href="mailto:azzam.moo10@gmail.com">📧 Email</a> •
-<a href="https://www.linkedin.com/in/mohamed-azzam-93115823a/">💼 LinkedIn</a>
+<a href="https://www.linkedin.com/in/mohamed-azzam-93115823a/">💼 LinkedIn</a> •
+<a href="https://azzammo.com">🌐 Portfolio</a>
 </td>
 </tr>
 </table>
