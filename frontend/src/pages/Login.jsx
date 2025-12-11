@@ -288,7 +288,7 @@ function Login({ setIsAuthenticated, setMustChangePassword }) {
     }
   };
 
-  const isWarning = error.includes('dernière tentative') || error.includes('⚠️');
+  const isWarning = error.includes('dernière tentative') || error.includes('Attention');
 
   return (
     <div className="auth-page">
@@ -339,7 +339,7 @@ function Login({ setIsAuthenticated, setMustChangePassword }) {
         </div>
         
         <div className="auth-branding-footer">
-          <p>© 2024 SecureAuth+. Tous droits réservés.</p>
+          <p>© 2025 SecureAuth+. Tous droits réservés.</p>
         </div>
       </div>
 
@@ -381,7 +381,7 @@ function Login({ setIsAuthenticated, setMustChangePassword }) {
                   {isWarning ? <Icons.AlertTriangle /> : <Icons.AlertCircle />}
                   <div className="auth-alert-content">
                     <strong>{isWarning ? 'Attention' : 'Échec de connexion'}</strong>
-                    <span>{error.replace('⚠️ ', '')}</span>
+                    <span>{error.replace('Attention : ', '')}</span>
                   </div>
                   <button onClick={() => setError('')} className="auth-alert-close">
                     <Icons.X />

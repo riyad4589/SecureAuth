@@ -39,7 +39,7 @@ function Registrations() {
     try {
       const response = await registrationAPI.approve(selectedRequest.id, comment);
       const tempPassword = response.data.data.temporaryPassword;
-      const username = response.data.data.username;
+      const username = response.data.data.user.username;
       
       // Afficher le modal avec le mot de passe
       setPasswordModalData({
@@ -60,8 +60,6 @@ function Registrations() {
   };
 
   const handleReject = async () => {
-    if (!window.confirm('Êtes-vous sûr de vouloir rejeter cette demande ?')) return;
-
     try {
       await registrationAPI.reject(selectedRequest.id, comment);
       toast.warning(`La demande de ${selectedRequest.firstName} ${selectedRequest.lastName} a été rejetée`, {
@@ -642,6 +640,7 @@ function Registrations() {
         username={passwordModalData.username}
         type="create"
       />
+
     </div>
   );
 }

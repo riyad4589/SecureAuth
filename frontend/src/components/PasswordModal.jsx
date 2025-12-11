@@ -56,8 +56,27 @@ function PasswordModal({ isOpen, onClose, password, username, type = 'create' })
   if (!isOpen) return null;
 
   const isReset = type === 'reset';
-  const title = isReset ? 'Mot de passe réinitialisé' : 'Compte créé avec succès';
-  const icon = isReset ? '🔑' : '✨';
+  const title = isReset ? 'Mot de passe réinitialisé' : 'Compte validé avec succès';
+
+  const getIcon = () => {
+    if (isReset) {
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <circle cx="12" cy="16" r="1"/>
+          <rect x="3" y="10" width="18" height="12" rx="2" ry="2"/>
+          <circle cx="12" cy="16" r="1"/>
+          <path d="m9 10 2-2 2 2"/>
+          <path d="M12 12v4"/>
+        </svg>
+      );
+    } else {
+      return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+      );
+    }
+  };
 
   return (
     <div className="password-modal-overlay" onClick={onClose}>
@@ -65,13 +84,13 @@ function PasswordModal({ isOpen, onClose, password, username, type = 'create' })
         {/* Header */}
         <div className="password-modal-header">
           <div className="password-modal-icon">
-            <span>{icon}</span>
+            {getIcon()}
           </div>
           <h2>{title}</h2>
           <p>
             {isReset 
               ? `Un nouveau mot de passe temporaire a été généré pour ${username}.`
-              : `Le compte de ${username} a été créé avec succès.`
+              : `Le compte de ${username} a été validé avec succès.`
             }
           </p>
         </div>
@@ -82,7 +101,7 @@ function PasswordModal({ isOpen, onClose, password, username, type = 'create' })
             <div className="password-modal-field">
               <label>Identifiant</label>
               <div className="password-modal-value">
-                <span>{username}</span>
+                <span><strong>{username}</strong></span>
               </div>
             </div>
           )}

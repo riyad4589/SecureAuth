@@ -303,7 +303,7 @@ function Dashboard() {
                   <option value="false">Échec</option>
                 </select>
               </div>
-              <button 
+              {/* <button 
                 type="button" 
                 onClick={handleResetFilters} 
                 className="btn btn-secondary btn-icon-only-mobile"
@@ -315,7 +315,7 @@ function Dashboard() {
                   <path d="M3 3v5h5"/>
                 </svg>
                 <span className="btn-text">Réinitialiser</span>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

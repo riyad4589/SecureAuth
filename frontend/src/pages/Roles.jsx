@@ -52,7 +52,7 @@ function Roles() {
     try {
       await roleAPI.create(formData);
       toast.success(`Rôle "${formData.name}" créé avec succès`, {
-        title: '✨ Nouveau rôle',
+        title: 'Nouveau rôle',
         icon: 'role'
       });
       setShowModal(false);
@@ -72,7 +72,7 @@ function Roles() {
     try {
       await roleAPI.update(selectedRole.id, formData);
       toast.success('Le rôle a été mis à jour', {
-        title: '✅ Rôle modifié',
+        title: 'Rôle modifié',
         icon: 'role'
       });
       setShowModal(false);
@@ -93,7 +93,7 @@ function Roles() {
     try {
       await roleAPI.delete(id);
       toast.success('Le rôle a été supprimé', {
-        title: '🗑️ Rôle supprimé',
+        title: 'Rôle supprimé',
         icon: 'trash'
       });
       cacheService.delete(CACHE_KEYS.ROLES);

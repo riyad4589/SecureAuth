@@ -24,6 +24,11 @@ public interface RegistrationRequestRepository extends JpaRepository<Registratio
     boolean existsByEmail(String email);
 
     /**
+     * Supprime une demande par email
+     */
+    void deleteByEmail(String email);
+
+    /**
      * Recherche les demandes par statut
      */
     List<RegistrationRequest> findByStatus(RegistrationRequest.RequestStatus status);

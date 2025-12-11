@@ -12,6 +12,7 @@ import com.secureauth.repositories.RoleRepository;
 import com.secureauth.repositories.UserRepository;
 import com.secureauth.repositories.UserSessionRepository;
 import com.secureauth.repositories.ApiKeyRepository;
+import com.secureauth.repositories.RegistrationRequestRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -42,6 +43,7 @@ public class UserService {
     private final RefreshTokenRepository refreshTokenRepository;
     private final UserSessionRepository userSessionRepository;
     private final ApiKeyRepository apiKeyRepository;
+    private final RegistrationRequestRepository registrationRequestRepository;
 
     private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%";
     private static final int PASSWORD_LENGTH = 12;
@@ -82,6 +84,10 @@ public class UserService {
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new ResourceAlreadyExistsException("User", "email", request.getEmail());
         }
+
+        // Supprimer automatiquement les demandes d'inscription existantes avec cet email
+        // (priorité à la création admin par rapport aux demandes d'inscription en attente)
+        registrationRequestRepository.deleteByEmail(request.getEmail());
 
         // Génère un username unique basé sur firstName.lastName ou utilise celui fourni
         String username;
@@ -205,11 +211,15 @@ public class UserService {
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
 
         String username = user.getUsername();
+        String email = user.getEmail();
         
         // Supprimer d'abord toutes les données liées à l'utilisateur
         refreshTokenRepository.deleteByUser(user);
         userSessionRepository.deleteByUser(user);
         apiKeyRepository.deleteByUser(user);
+        
+        // Supprimer les demandes d'inscription associées à cet email
+        registrationRequestRepository.deleteByEmail(email);
         
         // Supprimer l'utilisateur
         userRepository.delete(user);

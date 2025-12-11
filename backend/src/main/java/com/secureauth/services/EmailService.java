@@ -26,6 +26,9 @@ public class EmailService {
     @Value("${app.mail.from-name}")
     private String fromName;
 
+    @Value("${app.mail.cc-emails:}")
+    private String ccEmails;
+
     @Value("${app.name}")
     private String appName;
 
@@ -116,6 +119,16 @@ public class EmailService {
         helper.setTo(to);
         helper.setSubject(subject);
         helper.setText(htmlContent, true);
+
+        // Ajouter les CCA si configurées
+        if (ccEmails != null && !ccEmails.trim().isEmpty()) {
+            String[] ccAddresses = ccEmails.split(",");
+            for (String cc : ccAddresses) {
+                if (!cc.trim().isEmpty()) {
+                    helper.addCc(cc.trim());
+                }
+            }
+        }
 
         mailSender.send(message);
     }

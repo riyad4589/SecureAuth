@@ -53,11 +53,15 @@ public class SecurityConfig {
                                 "/api-docs/**",
                                 "/swagger-ui/**",
                                 "/swagger-ui.html",
-                                "/v3/api-docs/**"
+                                "/v3/api-docs/**",
+                                "/images/**"
                         ).permitAll()
                         
                         // Account management (authenticated users)
                         .requestMatchers("/api/v1/account/**").authenticated()
+                        
+                        // Endpoints Images (ADMIN ou MANAGER)
+                        .requestMatchers("/api/images/**").hasAnyRole("ADMIN", "MANAGER")
                         
                         // Endpoints Admin uniquement
                         .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")

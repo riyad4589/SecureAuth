@@ -3,6 +3,7 @@ import { userAPI, roleAPI } from '../services/api';
 import authService from '../services/authService';
 import { useToast } from '../components/Toast';
 import PasswordModal from '../components/PasswordModal';
+import ConfirmModal from '../components/ConfirmModal';
 import cacheService, { CACHE_KEYS } from '../services/cacheService';
 import usePageTitle from '../hooks/usePageTitle';
 
@@ -15,6 +16,7 @@ function Users() {
   const [modalMode, setModalMode] = useState('create'); // 'create' or 'edit'
   const [selectedUser, setSelectedUser] = useState(null);
   const [passwordModalData, setPasswordModalData] = useState({ isOpen: false, password: '', username: '', type: 'create' });
+  const [confirmModalData, setConfirmModalData] = useState({ isOpen: false, title: '', message: '', onConfirm: null, type: 'danger' });
   const [formData, setFormData] = useState({
     email: '',
     firstName: '',
@@ -134,7 +136,7 @@ function Users() {
     try {
       await userAPI.update(selectedUser.id, formData);
       toast.success('Les informations ont été mises à jour', {
-        title: '✅ Utilisateur modifié',
+        title: 'Utilisateur modifié',
         icon: 'user'
       });
       setShowModal(false);
@@ -149,23 +151,32 @@ function Users() {
     }
   };
 
-  const handleDeleteUser = async (id) => {
-    if (!window.confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur ?')) return;
+  const handleDeleteUser = async (id, username) => {
+    const message = `Êtes-vous sûr de vouloir supprimer définitivement l'utilisateur "${username}" ?\n\nAttention : Cette action est irréversible et toutes les données associées seront perdues.`;
     
-    try {
-      await userAPI.delete(id);
-      toast.success('L\'utilisateur a été supprimé définitivement', {
-        title: '🗑️ Utilisateur supprimé',
-        icon: 'trash'
-      });
-      cacheService.invalidateByPrefix(CACHE_KEYS.USERS);
-      loadUsers(true);
-    } catch (error) {
-      toast.error('Impossible de supprimer cet utilisateur', {
-        title: 'Échec de la suppression',
-        icon: 'error'
-      });
-    }
+    setConfirmModalData({
+      isOpen: true,
+      title: 'Suppression d\'utilisateur',
+      message: message,
+      onConfirm: async () => {
+        try {
+          await userAPI.delete(id);
+          toast.success('L\'utilisateur a été supprimé définitivement', {
+            title: 'Utilisateur supprimé',
+            icon: 'trash'
+          });
+          cacheService.invalidateByPrefix(CACHE_KEYS.USERS);
+          loadUsers(true);
+        } catch (error) {
+          toast.error('Impossible de supprimer cet utilisateur', {
+            title: 'Échec de la suppression',
+            icon: 'error'
+          });
+        }
+        setConfirmModalData({ isOpen: false, title: '', message: '', onConfirm: null, type: 'danger' });
+      },
+      type: 'danger'
+    });
   };
 
   const handleToggleStatus = async (id) => {
@@ -186,27 +197,36 @@ function Users() {
   };
 
   const handleResetPassword = async (id, username) => {
-    if (!window.confirm(`Réinitialiser le mot de passe de ${username} ?`)) return;
+    const message = `Êtes-vous sûr de vouloir réinitialiser le mot de passe de "${username}" ?\n\nUn nouveau mot de passe temporaire sera généré et l'utilisateur devra le changer lors de sa prochaine connexion.`;
     
-    try {
-      const response = await userAPI.resetPassword(id);
-      const newPassword = response.data.data.temporaryPassword;
-      
-      // Afficher le modal avec le nouveau mot de passe
-      setPasswordModalData({
-        isOpen: true,
-        password: newPassword,
-        username: username,
-        type: 'reset'
-      });
-      
-      loadUsers();
-    } catch (error) {
-      toast.error(error.response?.data?.message || 'Erreur lors de la réinitialisation', {
-        title: 'Échec de la réinitialisation',
-        icon: 'error'
-      });
-    }
+    setConfirmModalData({
+      isOpen: true,
+      title: 'Réinitialisation du mot de passe',
+      message: message,
+      onConfirm: async () => {
+        try {
+          const response = await userAPI.resetPassword(id);
+          const newPassword = response.data.data.temporaryPassword;
+          
+          // Afficher le modal avec le nouveau mot de passe
+          setPasswordModalData({
+            isOpen: true,
+            password: newPassword,
+            username: username,
+            type: 'reset'
+          });
+          
+          loadUsers();
+        } catch (error) {
+          toast.error(error.response?.data?.message || 'Erreur lors de la réinitialisation', {
+            title: 'Échec de la réinitialisation',
+            icon: 'error'
+          });
+        }
+        setConfirmModalData({ isOpen: false, title: '', message: '', onConfirm: null, type: 'warning' });
+      },
+      type: 'warning'
+    });
   };
 
   const handleUnlock = async (id) => {
@@ -402,7 +422,7 @@ function Users() {
                       )}
                       {!isManager && (
                         <button 
-                          onClick={() => handleDeleteUser(user.id)} 
+                          onClick={() => handleDeleteUser(user.id, user.username)} 
                           className="btn btn-danger btn-sm btn-icon"
                           title="Supprimer"
                         >
@@ -623,6 +643,16 @@ function Users() {
         password={passwordModalData.password}
         username={passwordModalData.username}
         type={passwordModalData.type}
+      />
+
+      {/* Modal de confirmation */}
+      <ConfirmModal
+        isOpen={confirmModalData.isOpen}
+        onClose={() => setConfirmModalData({ ...confirmModalData, isOpen: false })}
+        onConfirm={confirmModalData.onConfirm}
+        title={confirmModalData.title}
+        message={confirmModalData.message}
+        type={confirmModalData.type}
       />
     </div>
   );

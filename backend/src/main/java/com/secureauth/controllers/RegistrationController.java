@@ -36,8 +36,11 @@ public class RegistrationController {
             @Valid @RequestBody RegistrationRequestDto request) {
         
         RegistrationRequestResponse response = registrationService.submitRequest(request);
+        String message = response.getStatus().equals("PENDING") ? 
+            "Demande d'inscription soumise avec succès" : 
+            "Demande d'inscription mise à jour";
         return ResponseEntity.status(HttpStatus.CREATED)
-                .body(ApiResponse.success("Demande d'inscription soumise avec succès", response));
+                .body(ApiResponse.success(message, response));
     }
 
     @Operation(summary = "Récupérer les demandes en attente", description = "Liste des demandes non traitées (ADMIN)")

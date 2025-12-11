@@ -148,8 +148,9 @@ function Register() {
       const data = await response.json();
 
       if (response.ok) {
-        toast.success('Votre demande sera traitée par un administrateur', {
-          title: '✅ Demande envoyée avec succès !',
+        const isUpdate = data.message && data.message.includes('updated');
+        toast.success(isUpdate ? 'Votre demande a été mise à jour' : 'Votre demande sera traitée par un administrateur', {
+          title: isUpdate ? 'Demande mise à jour !' : 'Demande envoyée avec succès !',
           icon: 'user',
           duration: 8000
         });
@@ -219,7 +220,7 @@ function Register() {
         </div>
         
         <div className="auth-branding-footer">
-          <p>© 2024 SecureAuth+. Tous droits réservés.</p>
+          <p>© 2025 SecureAuth+. Tous droits réservés.</p>
         </div>
       </div>
 

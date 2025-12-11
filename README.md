@@ -224,6 +224,11 @@ spring:
   mail:
     username: votre_email@gmail.com
     password: votre_app_password
+
+cloudinary:
+  cloud-name: TON_CLOUD_NAME
+  api-key: TA_CLE_API
+  api-secret: TON_SECRET
 ```
 
 ### 🚀 Lancement

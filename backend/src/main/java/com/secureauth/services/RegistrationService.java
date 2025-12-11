@@ -14,6 +14,8 @@ import com.secureauth.exceptions.ResourceNotFoundException;
 import com.secureauth.repositories.RegistrationRequestRepository;
 import com.secureauth.repositories.RoleRepository;
 import com.secureauth.repositories.UserRepository;
+import java.util.List;
+import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,7 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
 import java.util.HashSet;
-import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -58,7 +60,9 @@ public class RegistrationService {
 
         // Vérifie si une demande existe déjà pour cet email
         if (registrationRequestRepository.existsByEmail(dto.getEmail())) {
-            throw new ResourceAlreadyExistsException("Une demande d'inscription existe déjà pour cet email");
+            // Supprimer l'ancienne demande pour permettre la nouvelle soumission
+            registrationRequestRepository.deleteByEmail(dto.getEmail());
+            log.info("Previous registration request deleted for email: {}", dto.getEmail());
         }
 
         RegistrationRequest request = RegistrationRequest.builder()

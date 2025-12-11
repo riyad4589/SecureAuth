@@ -269,7 +269,7 @@ function AccountSecurity({ setIsAuthenticated }) {
       const response = await authAPI.post('/account/api-keys', apiKeyForm);
       setNewApiKey(response.data.data.fullKey);
       toast.success('Copiez-la maintenant, elle ne sera plus affichée !', {
-        title: '🔑 Clé API créée',
+        title: 'Clé API créée',
         icon: 'key',
         duration: 10000
       });
@@ -293,7 +293,7 @@ function AccountSecurity({ setIsAuthenticated }) {
     try {
       await authAPI.delete(`/account/api-keys/${apiKeyId}`);
       toast.success('La clé API a été révoquée et ne peut plus être utilisée', {
-        title: '🗑️ Clé API révoquée',
+        title: 'Clé API révoquée',
         icon: 'trash'
       });
       loadApiKeys();

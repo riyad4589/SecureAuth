@@ -238,7 +238,7 @@ function ForceChangePassword({ setMustChangePassword }) {
         </div>
         
         <div className="auth-branding-footer">
-          <p>© 2024 SecureAuth+. Tous droits réservés.</p>
+          <p>© 2025 SecureAuth+. Tous droits réservés.</p>
         </div>
       </div>
 
