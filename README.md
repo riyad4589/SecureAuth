@@ -601,6 +601,7 @@ SecureAuth/
 </a><br /><br />
 <a href="mailto:riyadmaj10@gmail.com">📧 Email</a> •
 <a href="https://www.linkedin.com/in/mohamed-riyad-majghirou-5b62aa388/">💼 LinkedIn</a>
+<a href="https://www.riyadmaj.com/">🌐 Portfolio</a>
 </td>
 <td align="center" width="300">
 <a href="https://github.com/Azzammoo10">
@@ -608,7 +609,8 @@ SecureAuth/
 <b style="font-size: 18px;">Mohamed AZZAM</b>
 </a><br /><br />
 <a href="mailto:azzam.moo10@gmail.com">📧 Email</a> •
-<a href="https://www.linkedin.com/in/mohamed-azzam-93115823a/">💼 LinkedIn</a>
+<a href="https://www.linkedin.com/in/mohamed-azzam-93115823a/">💼 LinkedIn</a> •
+<a href="https://azzammo.com">🌐 Portfolio</a>
 </td>
 </tr>
 </table>
