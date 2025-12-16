@@ -210,25 +210,36 @@ CREATE DATABASE secureauth;
 Créer le fichier `backend/src/main/resources/application.yml` :
 
 ```yaml
+server:
+  port: 8080
+
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/secureauth
-    username: postgres
-    password: votre_mot_de_passe
-    
+    url: jdbc:mysql://localhost:3306/secureauth_db
+    username: your_db_username
+    password: your_db_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
 jwt:
-  secret: votre_secret_jwt_64_caracteres_minimum
-  expiration: 3600000
-  
-spring:
-  mail:
-    username: votre_email@gmail.com
-    password: votre_app_password
+  secret: your_jwt_secret_key
+  expiration: 86400000
 
 cloudinary:
-  cloud-name: TON_CLOUD_NAME
-  api-key: TA_CLE_API
-  api-secret: TON_SECRET
+  cloud_name: your_cloud_name
+  api_key: your_api_key
+  api_secret: your_api_secret
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+
+# Ajoutez ici d'autres configurations nécessaires à votre projet.
 ```
 
 ### 🚀 Lancement
